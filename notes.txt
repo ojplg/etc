@@ -10,6 +10,7 @@
   * postgres
   * liquibase
   * certbot
+  * discourse (hrorm forums)
   
 * git repositories cloned
   * gotdp
