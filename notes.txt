@@ -1,0 +1,45 @@
+* Ubuntu instance.
+* Expanded disk space from the default.
+
+* Software installed 
+  * nginx
+  * python 3
+  * ocaml
+  * haskell
+  * java
+  * postgres
+  * liquibase
+  * certbot
+  
+* git repositories cloned
+  * gotdp
+  * hrorm
+  * legup
+  * skirvy-odds
+  * wup
+
+IP Tables nonsense
+# to set port forwarding from 80 -> 8080
+sudo iptables -t nat -A OUTPUT -o lo -p tcp --dport 80 -j REDIRECT --to-port 8080
+# to see all the rules
+sudo iptables -t nat -L --line-numbers
+# to delete rule 2 from OUTPUT
+sudo iptables -D OUTPUT 2 -t nat
+
+POSTGRES DB
+# Runs as postgres.
+sudo su postgres
+# Separate users for each DB
+
+NGINX
+# Configuration in /etc/nginx
+# to test do
+sudo nginx -t
+# to reload configuration
+sudo service nginx reload
+
+HTTPS
+sudo certbot renew
+https://certbot.eff.org
+https://letsencrypt.org
+
